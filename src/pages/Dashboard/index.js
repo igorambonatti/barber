@@ -8,12 +8,12 @@ export default function Dashboard() {
     <Container>
       <header>
         <button type="button">
-          <MdChevronLeft size={32} color="#fff" />
+          <MdChevronLeft size={52} color="#fff" />
         </button>
 
         <strong>31 DE MAIO</strong>
         <button type="button">
-          <MdChevronRight size={32} color="#fff" />
+          <MdChevronRight size={52} color="#fff" />
         </button>
       </header>
       <ul>

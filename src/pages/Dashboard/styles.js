@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 600px;
+  max-width: 800px;
   margin: 50px auto;
 
   display: flex;
@@ -18,13 +18,13 @@ export const Container = styled.div`
   }
   strong {
     color: #fff;
-    font-size: 16px;
+    font-size: 20px;
     margin: 0 15px;
   }
   ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
+    grid-gap: 25px;
     margin-top: 30px;
   }
 `;

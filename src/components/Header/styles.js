@@ -7,7 +7,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   height: 64px;
-  max-width: 1100px;
+  max-width: 1500px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -25,7 +25,7 @@ export const Content = styled.div`
     a {
       font-weight: bold;
       color: #eb3349;
-      font-size: 14px;
+      font-size: 16px;
     }
   }
   aside {
@@ -44,12 +44,14 @@ export const Profile = styled.div`
     margin-right: 10px;
   }
   strong {
+    font-size: 20px;
     max-width: 200px;
     display: block;
     color: #eb3349;
     margin-top: 2px;
   }
   a {
+    font-size: 18px;
     color: #999;
     margin-top: 2px;
     font-size: 12px;

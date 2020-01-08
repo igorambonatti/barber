@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
   width: 100%;
-  max-width: 315px;
+  max-width: 415px;
   text-align: center;
 
   form {
@@ -38,7 +38,7 @@ export const Content = styled.div`
   }
 
   input {
-    height: 44px;
+    height: 54px;
     background: rgba(250, 250, 250, 1);
     margin: 0 0 10px;
     border: 0px;

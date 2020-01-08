@@ -6,16 +6,24 @@ import api from "../../../services/api";
 
 import { updateProfileSuccess, updateProfileFailure } from "./actions";
 
-export function* updateUser(payload) {
-  const { email, name, ...rest } = payload.data;
+export function* updateProfile({ payload }) {
+  try {
+    const { email, name, ...rest } = payload.data;
 
-  const profile = Object.assign({ email, name }, rest.oldPassword ? rest : {});
+    const profile = Object.assign(
+      { email, name },
+      rest.oldPassword ? rest : {}
+    );
 
-  const response = yield call(api.put, "users", profile);
+    const response = yield call(api.put, "users", profile);
 
-  toast.success("DEU XESQUEDELE");
+    toast.success("DEU XESQUEDELE");
 
-  yield put(updateProfileSuccess(response.data));
+    yield put(updateProfileSuccess(response.data));
+  } catch (err) {
+    toast.error("DEU RUIM AMIGOS");
+    yield put(updateProfileFailure());
+  }
 }
 
-export default all([takeLatest("@user/UPDATE_REQUEST", updateUser)]);
+export default all([takeLatest("@user/UPDATE_REQUEST", updateProfile)]);

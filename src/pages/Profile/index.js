@@ -20,9 +20,17 @@ export default function Profile() {
         <Input name={"name"} placeholder="Seu nome completo" />
         <Input name="email" placeholder="Seu endereço de email" />
         <hr />
-        <Input name="oldPassword" placeholder="Sua senha atual" />
-        <Input name="Password" placeholder="Nova senha" />
-        <Input name="confirmPassword" placeholder="Confirmação de senha" />
+        <Input
+          name="oldPassword"
+          type="password"
+          placeholder="Sua senha atual"
+        />
+        <Input name="password" type="password" placeholder="Nova senha" />
+        <Input
+          name="confirmPassword"
+          type="password"
+          placeholder="Confirmação de senha"
+        />
         <button type="submit">Atualizar</button>
       </Form>
       <button type="button">Sair</button>

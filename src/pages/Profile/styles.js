@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { darken } from "polished";
 
 export const Container = styled.div`
-  width: 600px;
+  width: 100%;
   margin: 50px auto;
-  max-width: 315px;
+  max-width: 500px;
   text-align: center;
 
   form {
@@ -37,14 +37,14 @@ export const Container = styled.div`
   }
 
   input {
-    height: 38px;
+    height: 58px;
     background: rgba(250, 250, 250, 1);
     margin: 0 0 10px;
     border: 0px;
     border-radius: 4px;
     padding: 0 15px;
     color: #000000;
-    font-size: 14px;
+    font-size: 16px;
     opacity: 0.85;
     &:hover {
       opacity: 0.95;
@@ -55,7 +55,7 @@ export const Container = styled.div`
   }
   button {
     margin: 2px 0 0;
-    height: 34px;
+    height: 48px;
     background: ${darken(0.06, "#3b9eff")};
     border-radius: 4px;
     border: 0;
