@@ -17,11 +17,11 @@ export function* updateProfile({ payload }) {
 
     const response = yield call(api.put, "users", profile);
 
-    toast.success("DEU XESQUEDELE");
+    toast.success("Atualizado com sucesso");
 
     yield put(updateProfileSuccess(response.data));
   } catch (err) {
-    toast.error("DEU RUIM AMIGOS");
+    toast.error("Revise seus dados");
     yield put(updateProfileFailure());
   }
 }

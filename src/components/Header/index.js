@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import Notifications from "../Notifications/index";
-import logo from "~/assets/logo-icon.svg";
+import Notifications from '../Notifications/index';
+import logo from '~/assets/logo-icon.svg';
 
-import { Container, Content, Profile } from "./styles";
+import { Container, Content, Profile } from './styles';
 
 export default function Header() {
   return (

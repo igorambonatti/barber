@@ -1,11 +1,11 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import { Form, Input } from "@rocketseat/unform";
-import * as Yup from "yup";
-import logo from "~/assets/logo.svg";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { Form, Input } from '@rocketseat/unform';
+import * as Yup from 'yup';
+import logo from '~/assets/logo.svg';
 
-import { signUpRequest } from "~/store/modules/auth/actions";
+import { signUpRequest } from '~/store/modules/auth/actions';
 
 export default function SignUp() {
   const dispatch = useDispatch();
@@ -15,11 +15,11 @@ export default function SignUp() {
   }
 
   const schema = Yup.object().shape({
-    name: Yup.string().required("*Insira seu nome"),
+    name: Yup.string().required('*Insira seu nome'),
     email: Yup.string()
-      .email("*Insira um email válido")
-      .required("*O email é obrigatório"),
-    password: Yup.string().required("*A senha é obrigatória")
+      .email('*Insira um email válido')
+      .required('*O email é obrigatório'),
+    password: Yup.string().required('*A senha é obrigatória'),
   });
 
   return (

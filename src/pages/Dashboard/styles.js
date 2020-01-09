@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   max-width: 800px;
@@ -37,13 +37,13 @@ export const Time = styled.li`
     margin: 0;
     text-align: left;
     display: block;
-    color: ${props => (props.available ? "#999" : "#eb3349")};
+    color: ${props => (props.available ? '#999' : '#eb3349')};
     font-size: 20px;
     font-weight: normal;
   }
   span {
     display: block;
     margin-top: 3px;
-    color: ${props => (props.available ? "#999" : "#4F4F4F")};
+    color: ${props => (props.available ? '#999' : '#4F4F4F')};
   }
 `;

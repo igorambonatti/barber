@@ -1,10 +1,10 @@
-import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
 
-import Auth from "~/pages/_layouts/auth/index";
-import Default from "~/pages/_layouts/default/index";
+import Auth from '~/pages/_layouts/auth/index';
+import Default from '~/pages/_layouts/default/index';
 
-import { store } from "~/store";
+import { store } from '~/store';
 
 export default function RouteWrapper({
   component: Component,

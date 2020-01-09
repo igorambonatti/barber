@@ -1,18 +1,18 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from 'react';
 
-import api from "~/services/api";
+import api from '~/services/api';
 
-import { MdNotifications } from "react-icons/md";
-import { parseISO, formatDistance } from "date-fns";
-import pt from "date-fns/locale/pt";
+import { MdNotifications } from 'react-icons/md';
+import { parseISO, formatDistance } from 'date-fns';
+import pt from 'date-fns/locale/pt';
 
 import {
   Container,
   Badge,
   NotificationList,
   Scroll,
-  Notification
-} from "./styles";
+  Notification,
+} from './styles';
 
 export default function Notifications() {
   const [visible, setVisible] = useState(false);
@@ -35,7 +35,7 @@ export default function Notifications() {
 
   useEffect(() => {
     async function loadNotifications() {
-      const response = await api.get("notifications");
+      const response = await api.get('notifications');
 
       const data = response.data.map(notification => ({
         ...notification,
@@ -44,9 +44,9 @@ export default function Notifications() {
           new Date(),
           {
             addSuffix: true,
-            locale: pt
+            locale: pt,
           }
-        )
+        ),
       }));
       setNotifications(data);
     }

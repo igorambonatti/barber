@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { MdChevronLeft, MdChevronRight } from "react-icons/md";
-import { Container, Time } from "./styles";
+import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
+import { Container, Time } from './styles';
 
 export default function Dashboard() {
   return (

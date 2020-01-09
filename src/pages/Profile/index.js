@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { useDispatch, useSelector } from "react-redux";
-import { Form, Input } from "@rocketseat/unform";
+import { useDispatch, useSelector } from 'react-redux';
+import { Form, Input } from '@rocketseat/unform';
 
-import { updateProfileRequest } from "~/store/modules/user/actions";
-import { Container } from "./styles";
+import { signOut } from '~/store/modules/auth/actions';
+import { updateProfileRequest } from '~/store/modules/user/actions';
+import { Container } from './styles';
 
 export default function Profile() {
   const dispatch = useDispatch();
@@ -12,12 +13,16 @@ export default function Profile() {
   function handleSubmit(data) {
     dispatch(updateProfileRequest(data));
   }
+  function handleSignOut() {
+    dispatch(signOut());
+  }
 
   const profile = useSelector(state => state.user.profile);
+
   return (
     <Container>
       <Form onSubmit={handleSubmit} initialData={profile}>
-        <Input name={"name"} placeholder="Seu nome completo" />
+        <Input name={'name'} placeholder="Seu nome completo" />
         <Input name="email" placeholder="Seu endereço de email" />
         <hr />
         <Input
@@ -33,7 +38,9 @@ export default function Profile() {
         />
         <button type="submit">Atualizar</button>
       </Form>
-      <button type="button">Sair</button>
+      <button onClick={handleSignOut} type="button">
+        Sair
+      </button>
     </Container>
   );
 }
