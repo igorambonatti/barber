@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 1420%;
   max-width: 800px;
-  margin: 50px auto;
+  margin: 50px auto 0;
 
   display: flex;
   flex-direction: column;
@@ -25,7 +24,7 @@ export const Container = styled.div`
   ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 25px;
+    grid-gap: 20px;
     margin-top: 30px;
   }
 `;
