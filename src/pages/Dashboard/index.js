@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 
-import { format } from 'date-fns';
+import { format, subDays, addDays } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
@@ -13,17 +13,23 @@ export default function Dashboard() {
     () => format(date, "d 'de' MMMM", { locale: pt }),
     [date]
   );
+  function handlePrevDay() {
+    setDate(subDays(date, 1));
+  }
+  function handleNextDay() {
+    setDate(addDays(date, 1));
+  }
 
   return (
     <Container>
       <header>
-        <button type="button">
-          <MdChevronLeft size={52} color="#fff" />
+        <button type="button" onClick={handlePrevDay}>
+          <MdChevronLeft size={44} color="#fff" />
         </button>
 
         <strong>{dateFormated}</strong>
-        <button type="button">
-          <MdChevronRight size={52} color="#fff" />
+        <button type="button" onClick={handleNextDay}>
+          <MdChevronRight size={44} color="#fff" />
         </button>
       </header>
       <ul>

@@ -18,7 +18,7 @@ export const Container = styled.div`
   }
   strong {
     color: #fff;
-    font-size: 20px;
+    font-size: 22px;
     margin: 0 15px;
   }
   ul {
