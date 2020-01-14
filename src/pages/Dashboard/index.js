@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
+
+import { format } from 'date-fns';
+import pt from 'date-fns/locale/pt';
 
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import { Container, Time } from './styles';
 
 export default function Dashboard() {
+  const [date, setDate] = useState(new Date());
+
+  const dateFormated = useMemo(
+    () => format(date, "d 'de' MMMM", { locale: pt }),
+    [date]
+  );
+
   return (
     <Container>
       <header>
@@ -11,7 +21,7 @@ export default function Dashboard() {
           <MdChevronLeft size={52} color="#fff" />
         </button>
 
-        <strong>31 DE MAIO</strong>
+        <strong>{dateFormated}</strong>
         <button type="button">
           <MdChevronRight size={52} color="#fff" />
         </button>
